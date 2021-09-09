@@ -1,10 +1,10 @@
 #!/bin/sh
 
-account="account1"
+account="account2"
 
 # manage aws config per scenario
 if cat ~/.aws/config | grep "$account"; then
-    export AWS_PROFILE="$account"
+    export AWS_PROFILE="$account2"
     echo "AWS_PROFILE = $AWS_PROFILE"
 
     export AWS_DEFAULT_REGION="us-east-1"
