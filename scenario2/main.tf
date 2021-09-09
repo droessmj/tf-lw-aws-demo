@@ -23,8 +23,8 @@ module "aws_cloudtrail" {
   version = "~> 0.1"
 
   use_existing_cloudtrail = true      
-  bucket_arn              = "arn:aws:s3:::aws-cloudtrail-logs-004507715063-93533abc"
-  bucket_name             = "aws-cloudtrail-logs-004507715063-93533abc"
+  bucket_arn              = var.bucket_arn
+  bucket_name             = var.bucket_name
 
   #sns_topic_name NOT pre-existing
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-account="account2"
+account="account3"
 
 # manage aws config per scenario
 if cat ~/.aws/config | grep "$account"; then
@@ -15,5 +15,6 @@ if [ -z "$1" ]; then
     terraform init
     terraform apply --auto-approve
 else
+    # TODO: add handling to empty/stop versioning bucket prior to delete or delete fails
     terraform destroy --auto-approve
 fi

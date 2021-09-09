@@ -1,6 +1,6 @@
 #!/bin/sh
 
-account="account2"
+account="account5"
 
 # manage aws config per scenario
 if cat ~/.aws/config | grep "$account"; then
