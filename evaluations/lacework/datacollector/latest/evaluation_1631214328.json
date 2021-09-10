@@ -1,0 +1,820 @@
+{
+  "total_vulnerabilities": 31,
+  "critical_vulnerabilities": 0,
+  "high_vulnerabilities": 1,
+  "medium_vulnerabilities": 2,
+  "low_vulnerabilities": 17,
+  "info_vulnerabilities": 11,
+  "fixable_vulnerabilities": 2,
+  "last_evaluation_time": "2021-09-09T19:05:28.069Z",
+  "image": {
+    "image_info": {
+      "image_digest": "sha256:eb27d40487ccc88b39ffc665e3606cec8173165326d6cc0d8c52129c4b885478",
+      "image_id": "sha256:9d1ce60e7d51818090cad725ce259cdbd4486d3cb5ee4ef3eaf7febe899c8c86",
+      "registry": "remote_scanner",
+      "repository": "lacework/datacollector",
+      "created_time": "2021-08-10T01:40:05.630Z",
+      "size": 89498524,
+      "tags": [
+        "latest"
+      ]
+    },
+    "image_layers": [
+      {
+        "hash": "sha256:204f1db0db0b2235a41503d21112ba9daf258643c5326ff3113e21d9c1bb9a78",
+        "created_by": "ADD file:e87e065765ef99e8db25307f469c7481ab480ac5fe6353ae4caf402766f14045 in / ",
+        "packages": []
+      },
+      {
+        "hash": "sha256:fa55db45dad10e3cd0baa7e002a749348341ec37d859217da7307c3b628b9abe",
+        "created_by": "apt-get update \u0026\u0026     apt-get upgrade -y \u0026\u0026     apt-get install --no-install-recommends ca-certificates libmagic1 -y \u0026\u0026     mkdir -p /var/lib/backup/${DcVersion} \u0026\u0026     mkdir -p /var/lib/lacework/config \u0026\u0026     mkdir -p /var/log/lacework \u0026\u0026     mkdir -p /laceworkfim \u0026\u0026     apt-get clean \u0026\u0026     rm -rf     /var/lib/apt/lists/*     /tmp/*     /var/tmp/*     /usr/share/man     /usr/share/doc     /usr/share/doc-base",
+        "packages": [
+          {
+            "name": "glibc",
+            "namespace": "ubuntu:18.04",
+            "version": "2.27-3ubuntu1.4",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2019-1010023",
+                "description": "** DISPUTED ** GNU Libc current is affected by: Re-mapping current loaded library with malicious ELF file. The impact is: In worst case attacker may evaluate privileges. The component is: libld. The attack vector is: Attacker sends 2 ELF files to victim and asks to run ldd on it. ldd execute code. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1010023",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-07-15T04:15Z",
+                      "Score": 6.8,
+                      "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.8,
+                      "ImpactScore": 5.9,
+                      "Score": 8.8,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-1010022",
+                "description": "** DISPUTED ** GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1010022",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-07-15T04:15Z",
+                      "Score": 7.5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 5.9,
+                      "Score": 9.8,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-1010024",
+                "description": "** DISPUTED ** GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass ASLR using cache of thread stack and heap. The component is: glibc. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-1010024",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-07-15T04:15Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 1.4,
+                      "Score": 5.3,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2018-20796",
+                "description": "In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix/regexec.c has Uncontrolled Recursion, as demonstrated by '(\\\\\\\\227|)(\\\\\\\\\\\\\\\\1\\\\\\\\\\\\\\\\1|t1|\\\\\\\\\\\\\\\\\\\\\\\\2537)+' in grep.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-20796",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-02-26T02:29Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2016-10739",
+                "description": "In the GNU C Library (aka glibc or libc6) through 2.28, the getaddrinfo function would successfully parse a string that contained an IPv4 address followed by whitespace and arbitrary characters, which could lead applications to incorrectly assume that it had parsed a valid string, without the possibility of embedded HTTP headers or other potentially dangerous substrings.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-10739",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-01-21T19:29Z",
+                      "Score": 4.6,
+                      "Vectors": "AV:L/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.4,
+                      "Score": 5.3,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2020-27618",
+                "description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390, and IBM1399 encodings, fails to advance the input state, which could lead to an infinite loop in applications, resulting in a denial of service, a different vulnerability from CVE-2016-10228.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-27618",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-02-26T23:15Z",
+                      "Score": 2.1,
+                      "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.6,
+                      "Score": 5.5,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2016-10228",
+                "description": "The iconv program in the GNU C Library (aka glibc or libc6) 2.31 and earlier, when invoked with multiple suffixes in the destination encoding (TRANSLATE or IGNORE) along with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-10228",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2017-03-02T01:59Z",
+                      "Score": 4.3,
+                      "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.2,
+                      "ImpactScore": 3.6,
+                      "Score": 5.9,
+                      "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2021-3326",
+                "description": "The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid input sequences in the ISO-2022-JP-3 encoding, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2021-3326",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-01-27T20:15Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-25013",
+                "description": "The iconv feature in the GNU C Library (aka glibc or libc6) through 2.32, when processing invalid multi-byte input sequences in the EUC-KR encoding, may have a buffer over-read.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-25013",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-01-04T18:15Z",
+                      "Score": 7.1,
+                      "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:C"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.2,
+                      "ImpactScore": 3.6,
+                      "Score": 5.9,
+                      "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2009-5155",
+                "description": "In the GNU C Library (aka glibc or libc6) before 2.28, parse_reg_exp in posix/regcomp.c misparses alternatives, which allows attackers to cause a denial of service (assertion failure and application exit) or trigger an incorrect result by attempting a regular-expression match.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2009-5155",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-02-26T02:29Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2020-6096",
+                "description": "An exploitable signed comparison vulnerability exists in the ARMv7 memcpy() implementation of GNU glibc 2.30.9000. Calling memcpy() (on ARMv7 targets that utilize the GNU glibc implementation) with a negative value for the 'num' parameter results in a signed comparison vulnerability. If an attacker underflows the 'num' parameter to memcpy(), this vulnerability could lead to undefined behavior such as writing to out-of-bounds memory and potentially remote code execution. Furthermore, this memcpy() implementation allows for program execution to continue in scenarios where a segmentation fault or crash should have occurred. The dangers occur in that subsequent execution and iterations of this code will be executed with this corrupted data.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-6096",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2020-04-01T22:15Z",
+                      "Score": 6.8,
+                      "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.2,
+                      "ImpactScore": 5.9,
+                      "Score": 8.1,
+                      "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-6488",
+                "description": "The string component in the GNU C Library (aka glibc or libc6) through 2.28, when running on the x32 architecture, incorrectly attempts to use a 64-bit register for size_t in assembly codes, which can lead to a segmentation fault or possibly unspecified other impact, as demonstrated by a crash in __memmove_avx_unaligned_erms in sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S during a memcpy.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-6488",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-01-18T19:29Z",
+                      "Score": 4.6,
+                      "Vectors": "AV:L/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 5.9,
+                      "Score": 7.8,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2015-8985",
+                "description": "The pop_fail_stack function in the GNU C Library (aka glibc or libc6) allows context-dependent attackers to cause a denial of service (assertion failure and application crash) via vectors related to extended regular expression processing.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2015-8985",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2017-03-20T16:59Z",
+                      "Score": 4.3,
+                      "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.2,
+                      "ImpactScore": 3.6,
+                      "Score": 5.9,
+                      "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-7309",
+                "description": "In the GNU C Library (aka glibc or libc6) through 2.29, the memcmp function for the x32 architecture can incorrectly return zero (indicating that the inputs are equal) because the RDX most significant bit is mishandled.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-7309",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-02-03T02:29Z",
+                      "Score": 2.1,
+                      "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.6,
+                      "Score": 5.5,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "gnutls28",
+            "namespace": "ubuntu:18.04",
+            "version": "3.5.18-1ubuntu1.4",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2018-16868",
+                "description": "A Bleichenbacher type side-channel based padding oracle attack was found in the way gnutls handles verification of RSA decrypted PKCS#1 v1.5 data. An attacker who is able to run process on the same physical core as the victim process, could use this to extract plaintext or in some cases downgrade any TLS connections to a vulnerable server.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-16868",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2018-12-03T14:29Z",
+                      "Score": 3.3,
+                      "Vectors": "AV:L/AC:M/Au:N/C:P/I:P/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 0.4,
+                      "ImpactScore": 4.7,
+                      "Score": 5.6,
+                      "Vectors": "CVSS:3.0/AV:P/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "shadow",
+            "namespace": "ubuntu:18.04",
+            "version": "1:4.5-1ubuntu2",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2013-4235",
+                "description": "shadow: TOCTOU (time-of-check time-of-use) race condition when copying and removing directory trees",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2013-4235",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-12-03T15:15Z",
+                      "Score": 3.3,
+                      "Vectors": "AV:L/AC:M/Au:N/C:N/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1,
+                      "ImpactScore": 3.6,
+                      "Score": 4.7,
+                      "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2018-7169",
+                "description": "An issue was discovered in shadow 4.5. newgidmap (in shadow-utils) is setuid and allows an unprivileged user to be placed in a user namespace where setgroups(2) is permitted. This allows an attacker to remove themselves from a supplementary group, which may allow access to certain filesystem paths if the administrator has used \\\\group blacklisting\\\\ (e.g., chmod g-rwx) to restrict access to paths. This flaw effectively reverts a security feature in the kernel (in particular, the /proc/self/setgroups knob) to prevent this sort of privilege escalation.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-7169",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2018-02-15T20:29Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 1.4,
+                      "Score": 5.3,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "libgcrypt20",
+            "namespace": "ubuntu:18.04",
+            "version": "1.8.1-4ubuntu1.2",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2021-33560",
+                "description": "Libgcrypt before 1.8.8 and 1.9.x before 1.9.3 mishandles ElGamal encryption because it lacks exponent blinding to address a side-channel attack against mpi_powm, and the window size is not chosen appropriately. This, for example, affects use of ElGamal in OpenPGP.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2021-33560",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-06-08T11:15Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "coreutils",
+            "namespace": "ubuntu:18.04",
+            "version": "8.28-1ubuntu1",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2016-2781",
+                "description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2016-2781",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2017-02-07T15:59Z",
+                      "Score": 2.1,
+                      "Vectors": "AV:L/AC:L/Au:N/C:N/I:P/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2,
+                      "ImpactScore": 4,
+                      "Score": 6.5,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "gcc-8",
+            "namespace": "ubuntu:18.04",
+            "version": "8.4.0-1ubuntu1~18.04",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2020-13844",
+                "description": "Arm Armv8-A core implementations utilizing speculative execution past unconditional changes in control flow may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis, aka \\\\straight-line speculation.\\\\",
+                "severity": "Medium",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-13844",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2020-06-08T23:15Z",
+                      "Score": 2.1,
+                      "Vectors": "AV:L/AC:L/Au:N/C:P/I:N/A:N"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.6,
+                      "Score": 5.5,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "pcre3",
+            "namespace": "ubuntu:18.04",
+            "version": "2:8.39-9",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2017-11164",
+                "description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2017-11164",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2017-07-11T03:29Z",
+                      "Score": 7.8,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:C"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-20838",
+                "description": "libpcre in PCRE before 8.43 allows a subject buffer over-read in JIT when UTF is disabled, and \\\\\\\\X or \\\\\\\\R has more than one fixed quantifier, a related issue to CVE-2019-20454.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-20838",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2020-06-15T17:15Z",
+                      "Score": 4.3,
+                      "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2020-14155",
+                "description": "libpcre in PCRE before 8.44 allows an integer overflow via a large number after a (?C substring.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-14155",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2020-06-15T17:15Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 1.4,
+                      "Score": 5.3,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "ncurses",
+            "namespace": "ubuntu:18.04",
+            "version": "6.1-1ubuntu1.18.04",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2019-17595",
+                "description": "There is a heap-based buffer over-read in the fmt_entry function in tinfo/comp_hash.c in the terminfo library in ncurses before 6.1-20191012.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-17595",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-10-14T21:15Z",
+                      "Score": 5.8,
+                      "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.8,
+                      "ImpactScore": 2.5,
+                      "Score": 5.4,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2019-17594",
+                "description": "There is a heap-based buffer over-read in the _nc_find_entry function in tinfo/comp_hash.c in the terminfo library in ncurses before 6.1-20191012.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-17594",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-10-14T21:15Z",
+                      "Score": 4.6,
+                      "Vectors": "AV:L/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.4,
+                      "Score": 5.3,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "gnupg2",
+            "namespace": "ubuntu:18.04",
+            "version": "2.2.4-1ubuntu1.4",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2019-13050",
+                "description": "Interaction between the sks-keyserver code through 1.2.0 of the SKS keyserver network, and GnuPG through 2.2.16, makes it risky to have a GnuPG keyserver configuration line referring to a host on the SKS keyserver network. Retrieving data from this network may cause a persistent denial of service, because of a Certificate Spamming Attack.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-13050",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-06-29T17:15Z",
+                      "Score": 5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 3.6,
+                      "Score": 7.5,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "systemd",
+            "namespace": "ubuntu:18.04",
+            "version": "237-3ubuntu10.50",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2020-13776",
+                "description": "systemd through v245 mishandles numerical usernames such as ones composed of decimal digits or 0x followed by hex digits, as demonstrated by use of root privileges when privileges of the 0x0 user account were intended. NOTE: this issue exists because of an incomplete fix for CVE-2017-1000082.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2020-13776",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2020-06-03T03:15Z",
+                      "Score": 6.2,
+                      "Vectors": "AV:L/AC:H/Au:N/C:C/I:C/A:C"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 0.8,
+                      "ImpactScore": 5.9,
+                      "Score": 6.7,
+                      "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "libtasn1-6",
+            "namespace": "ubuntu:18.04",
+            "version": "4.13-2",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2018-1000654",
+                "description": "GNU Libtasn1-4.13 libtasn1-4.13 version libtasn1-4.13, libtasn1-4.12 contains a DoS, specifically CPU usage will reach 100% when running asn1Paser against the POC due to an issue in _asn1_expand_object_id(p_tree), after a long time, the program will be killed. This attack appears to be exploitable via parsing a crafted file.",
+                "severity": "Info",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2018-1000654",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2018-08-20T19:31Z",
+                      "Score": 7.1,
+                      "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:C"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 3.6,
+                      "Score": 5.5,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "bash",
+            "namespace": "ubuntu:18.04",
+            "version": "4.4.18-2ubuntu1.2",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2019-18276",
+                "description": "An issue was discovered in disable_priv_mode in shell.c in GNU Bash through 5.0 patch 11. By default, if Bash is run with its effective UID not equal to its real UID, it will drop privileges by setting its effective UID to its real UID. However, it does so incorrectly. On Linux and other systems that support \\\\saved UID\\\\ functionality, the saved UID is not dropped. An attacker with command execution in the shell can use \\\\enable -f\\\\ for runtime loading of a new builtin, which can be a shared object that calls setuid() and therefore regains privileges. However, binaries running with an effective UID of 0 are unaffected.",
+                "severity": "Low",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2019-18276",
+                "fix_version": "",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2019-11-28T01:15Z",
+                      "Score": 7.2,
+                      "Vectors": "AV:L/AC:L/Au:N/C:C/I:C/A:C"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 1.8,
+                      "ImpactScore": 5.9,
+                      "Score": 7.8,
+                      "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "openssl",
+            "namespace": "ubuntu:18.04",
+            "version": "1.1.1-1ubuntu2.1~18.04.9",
+            "vulnerabilities": [
+              {
+                "name": "CVE-2021-3711",
+                "description": "In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt(). Typically an application will call this function twice. The first time, on entry, the \\\\out\\\\ parameter can be NULL and, on exit, the \\\\outlen\\\\ parameter is populated with the buffer size required to hold the decrypted plaintext. The application can then allocate a sufficiently sized buffer and call EVP_PKEY_decrypt() again, but this time passing a non-NULL value for the \\\\out\\\\ parameter. A bug in the implementation of the SM2 decryption code means that the calculation of the buffer size required to hold the plaintext returned by the first call to EVP_PKEY_decrypt() can be smaller than the actual size required by the second call. This can lead to a buffer overflow when EVP_PKEY_decrypt() is called by the application a second time with a buffer that is too small. A malicious attacker who is able present SM2 content for decryption to an application could cause attacker chosen data to overflow the buffer by up to a maximum of 62 bytes altering the contents of other data held after the buffer, possibly changing application behaviour or causing the application to crash. The location of the buffer is application dependent but is typically heap allocated. Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k).",
+                "severity": "High",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2021-3711",
+                "fix_version": "1.1.1-1ubuntu2.1~18.04.13",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-08-24T15:15Z",
+                      "Score": 7.5,
+                      "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 3.9,
+                      "ImpactScore": 5.9,
+                      "Score": 9.8,
+                      "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "CVE-2021-3712",
+                "description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own \\\\d2i\\\\ functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \\\\data\\\\ and \\\\length\\\\ fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \\\\data\\\\ field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+                "severity": "Medium",
+                "link": "http://people.ubuntu.com/~ubuntu-security/cve/CVE-2021-3712",
+                "fix_version": "1.1.1-1ubuntu2.1~18.04.13",
+                "metadata": {
+                  "NVD": {
+                    "CVSSv2": {
+                      "PublishedDateTime": "2021-08-24T15:15Z",
+                      "Score": 5.8,
+                      "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:P"
+                    },
+                    "CVSSv3": {
+                      "ExploitabilityScore": 2.2,
+                      "ImpactScore": 5.2,
+                      "Score": 7.4,
+                      "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "hash": "sha256:a41e194e5ed512172edeef5b549eb847ca82395fce6adb959d6467abfe046648",
+        "created_by": "COPY file:5f96b1738803ac7f9b15c4aa40630928566de928b1b38aa9d48e3e2c6933c80a in /var/lib/backup/datacollector_wrap.sh ",
+        "packages": []
+      },
+      {
+        "hash": "sha256:cb263c70fc382d6dd12d13a0f835fe54d9306939dc4fc73548b329ccf2539064",
+        "created_by": "COPY file:34eefd37cb1c997839b5d57f4669fc25f1cf4028fc55c8f1f5e4c2c88e189709 in /var/lib/backup/4.1.62/datacollector ",
+        "packages": []
+      }
+    ]
+  },
+  "scan_status": "Success"
+}
